@@ -1,0 +1,875 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        
+        "storageAccounts_brandonsa_name": {
+            "defaultValue": "brandonsa",
+            "type": "String"
+        },
+    "variables": {},
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp'.",
+            "type": "Microsoft.Sql/servers",
+            "kind": "v12.0",
+            "name": "[parameters('servers_ilp_name')]",
+            "apiVersion": "2015-05-01-preview",
+            "location": "westus",
+            "scale": null,
+            "properties": {
+                "administratorLogin": "[concat(parameters('servers_ilp_name'),'-sa')]",
+                "version": "12.0"
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Storage/storageAccounts/blauckteststorageaccount'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_RAGRS",
+                "tier": "Standard"
+            },
+            "kind": "StorageV2",
+            "name": "[parameters('storageAccounts_blauckteststorageaccount_name')]",
+            "apiVersion": "2018-07-01",
+            "location": "eastus",
+            "tags": {
+                "ms-resource-usage": "azure-cloud-shell"
+            },
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": true,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                },
+                "accessTier": "Hot"
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Storage/storageAccounts/ndeutsch'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_LRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_ndeutsch_name')]",
+            "apiVersion": "2018-07-01",
+            "location": "westus",
+            "tags": {
+                "ms-resource-usage": "azure-cloud-shell"
+            },
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": true,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Storage/storageAccounts/nathanacc2'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_RAGRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_nathanacc2_name')]",
+            "apiVersion": "2018-07-01",
+            "location": "westus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Storage/storageAccounts/josh07'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_RAGRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_josh07_name')]",
+            "apiVersion": "2018-07-01",
+            "location": "westus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Storage/storageAccounts/jasonsuh'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_RAGRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_jasonsuh_name')]",
+            "apiVersion": "2018-07-01",
+            "location": "westus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Storage/storageAccounts/bryan1'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_RAGRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_bryan1_name')]",
+            "apiVersion": "2018-07-01",
+            "location": "westus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Storage/storageAccounts/ilp'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_LRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_ilp_name')]",
+            "apiVersion": "2018-07-01",
+            "location": "westus",
+            "tags": {
+                "ms-resource-usage": "azure-cloud-shell"
+            },
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Storage/storageAccounts/brandonsa'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_RAGRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_brandonsa_name')]",
+            "apiVersion": "2018-07-01",
+            "location": "westus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Storage/storageAccounts/bryan'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_RAGRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_bryan_name')]",
+            "apiVersion": "2018-07-01",
+            "location": "westus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Storage/storageAccounts/mattfrazier'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_RAGRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_mattfrazier_name')]",
+            "apiVersion": "2018-07-01",
+            "location": "westus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Storage/storageAccounts/blauckstoragetest'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_RAGRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_blauckstoragetest_name')]",
+            "apiVersion": "2018-07-01",
+            "location": "westus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": false,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Web/connections/azureblob'.",
+            "type": "Microsoft.Web/connections",
+            "name": "[parameters('connections_azureblob_name')]",
+            "apiVersion": "2016-06-01",
+            "location": "westus",
+            "scale": null,
+            "properties": {
+                "displayName": "blobconnection",
+                "customParameterValues": {},
+                "api": {
+                    "id": "[concat('/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/providers/Microsoft.Web/locations/westus/managedApis/', parameters('connections_azureblob_name'))]"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Web/connections/azureeventgrid'.",
+            "type": "Microsoft.Web/connections",
+            "name": "[parameters('connections_azureeventgrid_name')]",
+            "apiVersion": "2016-06-01",
+            "location": "westus",
+            "scale": null,
+            "properties": {
+                "displayName": "nathan.ilp@succeedwithtcs.onmicrosoft.com",
+                "customParameterValues": {},
+                "api": {
+                    "id": "[concat('/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/providers/Microsoft.Web/locations/westus/managedApis/', parameters('connections_azureeventgrid_name'))]"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Web/serverfarms/ilp-web'.",
+            "type": "Microsoft.Web/serverfarms",
+            "sku": {
+                "name": "F1",
+                "tier": "Free",
+                "size": "F1",
+                "family": "F",
+                "capacity": 0
+            },
+            "kind": "app",
+            "name": "[parameters('serverfarms_ilp_web_name')]",
+            "apiVersion": "2016-09-01",
+            "location": "West US",
+            "scale": null,
+            "properties": {
+                "name": "[parameters('serverfarms_ilp_web_name')]",
+                "workerTierName": null,
+                "adminSiteName": null,
+                "hostingEnvironmentProfile": null,
+                "perSiteScaling": false,
+                "reserved": false,
+                "targetWorkerCount": 0,
+                "targetWorkerSizeId": 0
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/advisors/CreateIndex'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('advisors_CreateIndex_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/advisors/DropIndex'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('advisors_DropIndex_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/advisors/DbParameterization'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('advisors_DbParameterization_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/advisors/DefragmentIndex'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('advisors_DefragmentIndex_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/advisors/ForceLastGoodPlan'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('advisors_ForceLastGoodPlan_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/auditingPolicies",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('auditingPolicies_Default_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West US",
+            "scale": null,
+            "properties": {
+                "auditingState": "New",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": null,
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": null,
+                "storageAccountResourceGroupName": null,
+                "storageAccountSubscriptionId": null,
+                "fullAuditLogsTableName": "SQLDBAuditLogsIlp",
+                "auditLogsTableName": "Ilp",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/databases/wwi'.",
+            "type": "Microsoft.Sql/servers/databases",
+            "sku": {
+                "name": "Basic",
+                "tier": "Basic"
+            },
+            "kind": "v12.0,user",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('databases_wwi_name'))]",
+            "apiVersion": "2017-03-01-preview",
+            "location": "westus",
+            "scale": null,
+            "properties": {
+                "collation": "Latin1_General_100_CI_AS",
+                "maxSizeBytes": 2147483648,
+                "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+                "zoneRedundant": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/firewallRules/Access all'.",
+            "type": "Microsoft.Sql/servers/firewallRules",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('firewallRules_Access_all_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "startIpAddress": "0.0.0.0",
+                "endIpAddress": "255.255.255.255"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/firewallRules/AllowAllWindowsAzureIps'.",
+            "type": "Microsoft.Sql/servers/firewallRules",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('firewallRules_AllowAllWindowsAzureIps_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "startIpAddress": "0.0.0.0",
+                "endIpAddress": "0.0.0.0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/encryptionProtector/current'.",
+            "type": "Microsoft.Sql/servers/encryptionProtector",
+            "kind": "servicemanaged",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('encryptionProtector_current_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "serverKeyName": "ServiceManaged",
+                "serverKeyType": "ServiceManaged"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/keys/ServiceManaged'.",
+            "type": "Microsoft.Sql/servers/keys",
+            "kind": "servicemanaged",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('keys_ServiceManaged_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "serverKeyType": "[parameters('keys_ServiceManaged_name')]"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/vulnerabilityAssessments/Default'.",
+            "type": "Microsoft.Sql/servers/vulnerabilityAssessments",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('vulnerabilityAssessments_Default_name'))]",
+            "apiVersion": "2018-06-01-preview",
+            "scale": null,
+            "properties": {
+                "recurringScans": {
+                    "isEnabled": false,
+                    "emailSubscriptionAdmins": true
+                },
+                "storageContainerPath": "[parameters('vulnerabilityAssessments_Default_storageContainerPath')]"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/databases/master/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/auditingPolicies",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('databases_master_name'), '/', parameters('auditingPolicies_Default_name_2'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West US",
+            "scale": null,
+            "properties": {
+                "auditingState": "New",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": null,
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": null,
+                "storageAccountResourceGroupName": null,
+                "storageAccountSubscriptionId": null,
+                "useServerDefault": "Enabled",
+                "fullAuditLogsTableName": "SQLDBAuditLogsIlpMaster",
+                "auditLogsTableName": "IlpMaster",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/databases/master/geoBackupPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/geoBackupPolicies",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('databases_master_name'), '/', parameters('geoBackupPolicies_Default_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West US",
+            "scale": null,
+            "properties": {
+                "state": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/databases/master/transparentDataEncryption/current'.",
+            "type": "Microsoft.Sql/servers/databases/transparentDataEncryption",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('databases_master_name'), '/', parameters('transparentDataEncryption_current_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West US",
+            "scale": null,
+            "properties": {
+                "status": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/databases/master/vulnerabilityAssessments/Default'.",
+            "type": "Microsoft.Sql/servers/databases/vulnerabilityAssessments",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('databases_master_name'), '/', parameters('vulnerabilityAssessments_Default_name_2'))]",
+            "apiVersion": "2017-03-01-preview",
+            "scale": null,
+            "properties": {
+                "recurringScans": {
+                    "isEnabled": false,
+                    "emailSubscriptionAdmins": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/databases/wwi/advisors/CreateIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('databases_wwi_name'), '/', parameters('advisors_CreateIndex_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_ilp_name'), parameters('databases_wwi_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/databases/wwi/advisors/DropIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('databases_wwi_name'), '/', parameters('advisors_DropIndex_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_ilp_name'), parameters('databases_wwi_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/databases/wwi/advisors/DbParameterization'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('databases_wwi_name'), '/', parameters('advisors_DbParameterization_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_ilp_name'), parameters('databases_wwi_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/databases/wwi/advisors/DefragmentIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('databases_wwi_name'), '/', parameters('advisors_DefragmentIndex_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_ilp_name'), parameters('databases_wwi_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/databases/wwi/advisors/ForceLastGoodPlan'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('databases_wwi_name'), '/', parameters('advisors_ForceLastGoodPlan_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_ilp_name'), parameters('databases_wwi_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/databases/wwi/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/auditingPolicies",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('databases_wwi_name'), '/', parameters('auditingPolicies_Default_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West US",
+            "scale": null,
+            "properties": {
+                "auditingState": "New",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": null,
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": null,
+                "storageAccountResourceGroupName": null,
+                "storageAccountSubscriptionId": null,
+                "useServerDefault": "Enabled",
+                "fullAuditLogsTableName": "SQLDBAuditLogsIlpWwi",
+                "auditLogsTableName": "IlpWwi",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_ilp_name'), parameters('databases_wwi_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/databases/wwi/geoBackupPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/geoBackupPolicies",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('databases_wwi_name'), '/', parameters('geoBackupPolicies_Default_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West US",
+            "scale": null,
+            "properties": {
+                "state": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_ilp_name'), parameters('databases_wwi_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/databases/wwi/transparentDataEncryption/current'.",
+            "type": "Microsoft.Sql/servers/databases/transparentDataEncryption",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('databases_wwi_name'), '/', parameters('transparentDataEncryption_current_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West US",
+            "scale": null,
+            "properties": {
+                "status": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_ilp_name'), parameters('databases_wwi_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/e0007193-9bac-48ba-803e-709dce1fa0ef/resourceGroups/ilp-rg/providers/Microsoft.Sql/servers/ilp/databases/wwi/vulnerabilityAssessments/Default'.",
+            "type": "Microsoft.Sql/servers/databases/vulnerabilityAssessments",
+            "name": "[concat(parameters('servers_ilp_name'), '/', parameters('databases_wwi_name'), '/', parameters('vulnerabilityAssessments_Default_name_1'))]",
+            "apiVersion": "2017-03-01-preview",
+            "scale": null,
+            "properties": {
+                "recurringScans": {
+                    "isEnabled": false,
+                    "emailSubscriptionAdmins": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_ilp_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_ilp_name'), parameters('databases_wwi_name'))]"
+            ]
+        }
+    ]
+}
