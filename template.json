@@ -4,7 +4,7 @@
     "parameters": {
         
         "storageAccounts_brandonsa_name": {
-            "defaultValue": "brandonsa",
+            "defaultValue": "brandonsa2",
             "type": "String"
         },
     "variables": {},
